@@ -1,0 +1,10 @@
+# Ignorar configuraciones locales de Visual Studio
+.vs/
+
+# Ignorar archivos de compilación
+bin/
+obj/
+
+# Ignorar otros archivos innecesarios
+*.user
+*.suo
