@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace pryTrabajoIntegrador3
 {
-    public partial class frmAgregarCliente : Form
+    public partial class frmDesarollador : Form
     {
-        public frmAgregarCliente()
+        public frmDesarollador()
         {
             InitializeComponent();
-        }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            clsCliente X = new clsCliente();
-            X.AgregarCliente(txtNombre, txtDeuda, txtLimite, txtCiudad);
         }
     }
 }

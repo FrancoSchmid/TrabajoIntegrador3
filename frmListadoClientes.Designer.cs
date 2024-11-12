@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.grpConsulta = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbOrden = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCantidadCliente = new System.Windows.Forms.Label();
             this.lblTotalDeuda = new System.Windows.Forms.Label();
@@ -39,11 +41,6 @@
             this.btnOrdenar = new System.Windows.Forms.Button();
             this.btnGenerarReporte = new System.Windows.Forms.Button();
             this.btnListar = new System.Windows.Forms.Button();
-            this.rbtnNombre = new System.Windows.Forms.RadioButton();
-            this.rbtnDeuda = new System.Windows.Forms.RadioButton();
-            this.rbtnCiudad = new System.Windows.Forms.RadioButton();
-            this.rbtnLimite = new System.Windows.Forms.RadioButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.grpConsulta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaClientes)).BeginInit();
             this.SuspendLayout();
@@ -51,10 +48,7 @@
             // grpConsulta
             // 
             this.grpConsulta.Controls.Add(this.comboBox1);
-            this.grpConsulta.Controls.Add(this.rbtnLimite);
-            this.grpConsulta.Controls.Add(this.rbtnCiudad);
-            this.grpConsulta.Controls.Add(this.rbtnDeuda);
-            this.grpConsulta.Controls.Add(this.rbtnNombre);
+            this.grpConsulta.Controls.Add(this.cmbOrden);
             this.grpConsulta.Controls.Add(this.label1);
             this.grpConsulta.Controls.Add(this.lblCantidadCliente);
             this.grpConsulta.Controls.Add(this.lblTotalDeuda);
@@ -70,13 +64,38 @@
             this.grpConsulta.TabStop = false;
             this.grpConsulta.Text = " ";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "IdCliente",
+            "Nombre",
+            "Deuda",
+            "Limite",
+            "IdCiudad"});
+            this.comboBox1.Location = new System.Drawing.Point(145, 340);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 26);
+            this.comboBox1.TabIndex = 26;
+            // 
+            // cmbOrden
+            // 
+            this.cmbOrden.FormattingEnabled = true;
+            this.cmbOrden.Items.AddRange(new object[] {
+            "Ascendente ",
+            "Descendente"});
+            this.cmbOrden.Location = new System.Drawing.Point(18, 340);
+            this.cmbOrden.Name = "cmbOrden";
+            this.cmbOrden.Size = new System.Drawing.Size(121, 26);
+            this.cmbOrden.TabIndex = 25;
+            // 
             // label1
             // 
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(580, 411);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 13);
+            this.label1.Size = new System.Drawing.Size(71, 18);
             this.label1.TabIndex = 20;
             // 
             // lblCantidadCliente
@@ -85,7 +104,7 @@
             this.lblCantidadCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadCliente.Location = new System.Drawing.Point(580, 376);
             this.lblCantidadCliente.Name = "lblCantidadCliente";
-            this.lblCantidadCliente.Size = new System.Drawing.Size(71, 13);
+            this.lblCantidadCliente.Size = new System.Drawing.Size(71, 18);
             this.lblCantidadCliente.TabIndex = 19;
             // 
             // lblTotalDeuda
@@ -95,7 +114,7 @@
             this.lblTotalDeuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalDeuda.Location = new System.Drawing.Point(580, 343);
             this.lblTotalDeuda.Name = "lblTotalDeuda";
-            this.lblTotalDeuda.Size = new System.Drawing.Size(71, 13);
+            this.lblTotalDeuda.Size = new System.Drawing.Size(71, 18);
             this.lblTotalDeuda.TabIndex = 18;
             // 
             // lblPromedioDeuda
@@ -169,61 +188,6 @@
             this.btnListar.Text = "LISTAR";
             this.btnListar.UseVisualStyleBackColor = false;
             // 
-            // rbtnNombre
-            // 
-            this.rbtnNombre.AutoSize = true;
-            this.rbtnNombre.Location = new System.Drawing.Point(18, 372);
-            this.rbtnNombre.Name = "rbtnNombre";
-            this.rbtnNombre.Size = new System.Drawing.Size(80, 22);
-            this.rbtnNombre.TabIndex = 21;
-            this.rbtnNombre.TabStop = true;
-            this.rbtnNombre.Text = "Nombre";
-            this.rbtnNombre.UseVisualStyleBackColor = true;
-            // 
-            // rbtnDeuda
-            // 
-            this.rbtnDeuda.AutoSize = true;
-            this.rbtnDeuda.Location = new System.Drawing.Point(18, 400);
-            this.rbtnDeuda.Name = "rbtnDeuda";
-            this.rbtnDeuda.Size = new System.Drawing.Size(69, 22);
-            this.rbtnDeuda.TabIndex = 22;
-            this.rbtnDeuda.TabStop = true;
-            this.rbtnDeuda.Text = "Deuda";
-            this.rbtnDeuda.UseVisualStyleBackColor = true;
-            // 
-            // rbtnCiudad
-            // 
-            this.rbtnCiudad.AutoSize = true;
-            this.rbtnCiudad.Location = new System.Drawing.Point(104, 400);
-            this.rbtnCiudad.Name = "rbtnCiudad";
-            this.rbtnCiudad.Size = new System.Drawing.Size(72, 22);
-            this.rbtnCiudad.TabIndex = 23;
-            this.rbtnCiudad.TabStop = true;
-            this.rbtnCiudad.Text = "Ciudad";
-            this.rbtnCiudad.UseVisualStyleBackColor = true;
-            // 
-            // rbtnLimite
-            // 
-            this.rbtnLimite.AutoSize = true;
-            this.rbtnLimite.Location = new System.Drawing.Point(104, 372);
-            this.rbtnLimite.Name = "rbtnLimite";
-            this.rbtnLimite.Size = new System.Drawing.Size(65, 22);
-            this.rbtnLimite.TabIndex = 24;
-            this.rbtnLimite.TabStop = true;
-            this.rbtnLimite.Text = "Limite";
-            this.rbtnLimite.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Ascendente ",
-            "Descendente"});
-            this.comboBox1.Location = new System.Drawing.Point(18, 340);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 26);
-            this.comboBox1.TabIndex = 25;
-            // 
             // frmListadoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -256,10 +220,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCantidadCliente;
         private System.Windows.Forms.Label lblTotalDeuda;
+        private System.Windows.Forms.ComboBox cmbOrden;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.RadioButton rbtnLimite;
-        private System.Windows.Forms.RadioButton rbtnCiudad;
-        private System.Windows.Forms.RadioButton rbtnDeuda;
-        private System.Windows.Forms.RadioButton rbtnNombre;
     }
 }

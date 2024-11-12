@@ -40,5 +40,24 @@ namespace pryTrabajoIntegrador3
 
             this.Close();
         }
+
+        private void datosPersonalesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDesarollador frmDesarollador = new frmDesarollador();
+            frmDesarollador.ShowDialog();
+            this.Close();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buscarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBuscarCliente frmBuscarCliente = new frmBuscarCliente();
+            frmBuscarCliente.ShowDialog();
+            this.Close();
+        }
     }
 }
